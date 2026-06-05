@@ -73,10 +73,12 @@ function processInput(param: string | number | boolean): string | number | boole
         return `My age is ${param}`; // Example of processing a number
     }
     else{
-        return `My status of Job is ${param}`; // Example of processing a boolean
+        let res: string = param?"married":"unmarried";
+        return `Are you married? ${res}`; // Example of processing a boolean
     }
 }
 
 console.log(processInput("NCC")); // Output: My name is NCC
 console.log(processInput(28)); // Output: My age is 28
-console.log(processInput(true)); // Output: My status of Job is true
+console.log(processInput(true)); // Output: Are you married? married
+console.log(processInput(false)); // Output: Are you married? unmarried
